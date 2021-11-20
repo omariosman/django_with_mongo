@@ -1,0 +1,6 @@
+
+<form action="{% url 'program:insert_program' %}" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Submit" />
+    

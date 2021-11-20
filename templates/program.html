@@ -1,0 +1,14 @@
+<h2>Running the program</h2>
+<h4>Taking the XML from the file and put it into Mongo collection</h4>
+
+{% csrf_token %}
+<form method="POST">
+   
+    <select name="program_id">
+    {% for program in programs %}
+        <option value="{{ program.id }}">{{ program.name }}</option>
+    {% endfor %}
+    </select>
+    <input type="submit" value="Submit" />
+
+    </form>
